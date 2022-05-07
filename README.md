@@ -1,1 +1,1 @@
-DesignPatterns2022
+This is just a repository to follow along with the youtube playlist for Design Patterns by Teddy Smith

@@ -1,16 +1,16 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿
+
+using DesignPatterns2022.Factory.NetworkFactory;
+using DesignPatterns2022.Factory.NetworkUtility;
 
 
+NetworkFactory factory = new NetworkFactory();
 
-using DesignPatterns2022.Singleton;
+var ping = factory.GetNetworkInstance("ping");
+var dns = factory.GetNetworkInstance("dns");
+var arp = factory.GetNetworkInstance("arp");
 
-Singleton object1 = Singleton.Instance();
-Singleton object2 = Singleton.Instance();
+ping.SendRequest("13.456.123", 2); 
+dns.SendRequest("13.456.123", 4);
+arp.SendRequest("14.56.123", 4);
 
-if(object1 == object2)
-{
-    Console.WriteLine("These objects are the same");
-
-}
-
-int val = 0;
